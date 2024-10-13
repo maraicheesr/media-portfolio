@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&family=Orelega+One&family=Playwrite+FR+Moderne:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Roboto+Slab:wght@100..900&display=swap');
+
+
+html {scroll-behavior: smooth;}
+
+body {margin: 0;
+    font-family: "Roboto Slab", serif;
+    overflow-y: scroll;
+    
+    overflow-x: hidden;
+    padding: 0;
+}
+
+section {margin: 0; height: fit-content;}
+
+#navbar {
+    background-color: #a3d6d4;
+    padding: 1.5vw 0;
+    position: fixed;
+    width: 25vw;
+    color: #354544;
+    border: 1vw solid white;
+    height: 100vh
+}
+
+#navbar .title, #navbar a {
+    display: block;
+    min-width: inherit;
+    text-align: left;
+    margin-bottom: 1.7vw;
+    position: relative;}
+
+#navbar .title {max-width: 25vw; font-family: "Orelega One", serif; font-weight: 1300; font-size: 3.6vw; padding: 0 2vw 0 0; text-align: right;
+-webkit-text-stroke: 0.05vw #ffffff; line-height: 0.9; margin-bottom: 2vw;} 
+
+#navbar a button {
+    background-color: transparent;
+    font-family: inherit;
+    color: #354544;
+    cursor: pointer;
+    height: 3.9vw;
+    font-weight: 700;
+    font-size: 1.8vw;
+    width: 100%;
+    border:none;
+    transition: all 0.3s;
+}
+
+#navbar a button:hover, #navbar a button:active {
+    color: #84adac;;
+}
+
+#navbar a button:hover + i, #navbar a button:active + i{
+    color: white;
+    transform: scale(1.2);
+}
+
+
+
+#navbar i {color: white;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width:inherit;
+    text-align: center;
+    left:0;
+    right: 0;
+    margin: auto;
+    color: #84adac;
+    font-size: 3.6vw;
+    margin-top: -3.65vw;
+    transition: all 0.3s;
+}
+
+
+
+#content {color: white;
+    max-width: 74vw;
+    min-width: 74vw; background: #354544; margin-right: 0; margin-left: auto;
+    padding: 1vw 5vw;
+    height: 100%;
+    font-size: 1.3vw;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;  }
+
+
+#content > section > h1 {font-size: 2.5vw; padding-top: 1.5vw;}
+
+#content .deco {
+    position: absolute;
+}
+
+
+
+/* -----------------------*/
+/* -----------------------*/
+/* -----------------------*/
+/* ---------ABOUT ME --------------*/
+
+#aboutme p {display: inline-block; margin: 1vw 0}
+  
+  .pic-container, .pic-container-container {
+    width:14vw;
+  
+  }
+  
+  .pic-container, .pic-container::after {
+    content: '';
+    position: absolute;
+    width: 14vw;
+    height: 14vw;
+    margin-top: 7vw;
+    display: inline-block;
+    overflow: visible;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+
+  .pic-container {    margin-left: auto; float: right; top: -20vw; right: 3.5vw;
+  position: relative; display: inline-block; margin-bottom: -15vw;}
+  
+  
+  .pic-container-container {
+    display: flex;
+    justify-content:center;
+    position:absolute;
+    align-items: end;
+    border-radius: 0 0 100vw 100vw;
+    overflow: hidden;
+    aspect-ratio: 1 / 1.5;
+    top: 0
+  }
+  
+  .circle {
+    width: 14vw;
+    height: 14vw;
+    border-radius: 50%;
+    background: hsl(178, 38%, 74%);
+    position: absolute;
+  }
+  
+  .pic-container:hover::after {
+    box-shadow: -0.6vw 1.2vw 0px 0.2vw hsl(178, 38%, 80%),
+      0.3vw 2.4vw 0 0.2vw hsl(178, 38%, 86%), -0.6vw 3.6vw 0px 0.3vw hsl(178, 38%, 92%);
+    filter: drop-shadow(4px 4px 5px #fff);
+  }
+  
+  .pic-container img {
+    width: 16.8vw;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    z-index:10;
+  }
+  
+  .pic-container:hover img {
+    transform: scale(1.2);
+    margin-bottom: 1.4vw;
+  }
+
+
+/*---------------EYP-----------------*/
+/*---------------DROPDOWN-----------------*/
+
+.dropdown {}
+
+.dropdown input {display: none; cursor: pointer;}
+
+.dropdown h1 {
+  font-size: 1.9vw;
+  background: #fff;
+  color: #354544;
+  padding: 0.2vw 1vw;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+.dropdown-content {height: 0; color: #354544; overflow: hidden; max-width: 86%; background-color: white; right: 0; left: 0; margin: auto; padding: 0 2vw;}
+
+.dropdown-content h3 {margin-top: 1vw; font-style: italic;}
+.dropdown-content h4 {font-size: 1.5vw;}
+.dropdown-content > p {margin-top: -1vw;}
+
+.dropdown-content > div {display: flex; justify-content: space-between; margin-bottom: 2vw;}
+
+.dropdown input:checked ~ .dropdown-content {height: fit-content;  padding: 0 3vw 2vw 3vw;} /*fix smooth transition*/
+
+.dropdown-content iframe {width: 45%; aspect-ratio: 4/3; display: inline-block;}
+
+
+
+/*-------------WEB DESIGN---------------------*/
+#coding iframe {width: 100%; aspect-ratio: 16/9;}
+#coding > h3 > a {font-size: 1.6vw; padding: 0.2vw 1vw; background: white; color:#84adac}
+
+#coding > h3 > a:active, #contact a:active {color: #354544;}
+#coding > h3 > a:visited, #contact a:visited {color: #a3d6d4}
+
+#contact a {color:#ffffff}
+#contact a:active {color: #6e9a97;}
+#contact a:visited {color: #a3d6d4}
+
+#photography img, #artworks img {width: 40%; display: inline-block; aspect-ratio: 4/3; object-fit: cover; margin: 0 2%}
+#photography div, #artworks div {display: flex; justify-content: space-evenly; margin: 1.5vw 0}
